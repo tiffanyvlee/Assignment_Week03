@@ -5,7 +5,7 @@ public class playerMovement : MonoBehaviour {
 
 
 		float acceleration = 0.8f;
-		float rotatespeed = 5;
+		float rotatespeed = 3;
 		Rigidbody2D thisRigidBody;
 
 		// Use this for initialization
@@ -15,8 +15,8 @@ public class playerMovement : MonoBehaviour {
 
 		// Update is called once per frame
 		void Update () {
-			thisRigidBody.AddForce( Vector3.up * Input.GetAxis( "Vertical" ) * acceleration );
-			thisRigidBody.AddForce( Vector3.right * Input.GetAxis("Horizontal") * acceleration );
+			thisRigidBody.AddForce( Vector3.up * Input.GetAxis( "Vertical" ));
+			thisRigidBody.AddForce( Vector3.right * Input.GetAxis("Horizontal") );
 			if (Input.GetKey (KeyCode.X)) {
 				print("fly bird forward");
 				transform.Rotate( Vector3.forward * rotatespeed);
